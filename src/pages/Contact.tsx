@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/Contact";
+import ContactForm from "@/components/contact-section";
 
 export default function Contact() {
   return (
