@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/hero-section";
 import Carousel from "@/components/carousel";
 import Features from "@/components/Features";
-import Solutions from "@/components/Solutions";
+import ServicesSection from "@/components/services-section";
 import Portfolio from "@/components/portfolio-section";
 import Team from "@/components/Team";
 import Pricing from "@/components/Pricing";
@@ -24,7 +24,7 @@ export default function Home() {
           <Hero />
           <Carousel />
           <Features />
-          <Solutions />
+          <ServicesSection />
           <Portfolio />
           <Team />
           <Pricing />
