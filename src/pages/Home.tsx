@@ -6,7 +6,6 @@ import Features from "@/components/Features";
 import ServicesSection from "@/components/services-section";
 import Portfolio from "@/components/portfolio-section";
 import Team from "@/components/Team";
-import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -27,7 +26,6 @@ export default function Home() {
           <ServicesSection />
           <Portfolio />
           <Team />
-          <Pricing />
           <Contact />
         </main>
         <Footer />
