@@ -1,7 +1,7 @@
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/hero-section";
-import BrandScroller from "@/components/BrandScroller";
+import Carousel from "@/components/carousel";
 import Features from "@/components/Features";
 import Solutions from "@/components/Solutions";
 import Portfolio from "@/components/portfolio-section";
@@ -22,7 +22,7 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
-          <BrandScroller />
+          <Carousel />
           <Features />
           <Solutions />
           <Portfolio />
