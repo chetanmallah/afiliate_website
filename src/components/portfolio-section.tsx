@@ -116,7 +116,9 @@ export default function PortfolioSection() {
                 </p>
                 
                 <button className="inline-flex items-center text-primary hover:text-accent font-semibold text-sm transition-colors group/btn">
-                  View Case Study
+                  <span onClick={() => window.location.href = `/case-studies/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                    View Case Study
+                  </span>
                   <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                 </button>
               </div>

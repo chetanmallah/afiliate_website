@@ -14,6 +14,186 @@ const caseStudyData = {
     duration: "6 months",
     results: {
       salesIncrease: "300%",
+      revenueGrowth: "₹2.5Cr",
+      conversionRate: "12.5%",
+      affiliatePartners: "150+"
+    },
+    challenge: "StyleCraft Fashion was struggling with low visibility on Amazon and poor conversion rates. Their product listings were not optimized, and they had minimal brand presence on the platform.",
+    solution: "We implemented a comprehensive Amazon optimization strategy including listing optimization, PPC campaigns, influencer partnerships, and brand store development.",
+    implementation: [
+      "Conducted thorough market analysis and competitor research",
+      "Optimized all product listings with SEO-focused keywords",
+      "Created compelling A+ content and brand store",
+      "Launched targeted PPC campaigns across multiple ad types",
+      "Partnered with fashion influencers for product promotion",
+      "Implemented inventory management and pricing strategies"
+    ],
+    results_detail: "Within 6 months, StyleCraft Fashion saw unprecedented growth. Sales increased by 300%, revenue grew to ₹2.5Cr, and conversion rates improved to 12.5%. The brand became a top seller in their category.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    testimonial: {
+      quote: "The results exceeded our wildest expectations. Our Amazon business transformed completely.",
+      author: "Priya Sharma",
+      position: "Founder, StyleCraft Fashion"
+    }
+  },
+  "tech-startup-seo-campaign": {
+    title: "Tech Startup SEO Campaign",
+    subtitle: "Ranking #1 for 50+ keywords and 500% traffic growth",
+    client: "TechFlow Solutions",
+    industry: "SaaS Technology",
+    duration: "8 months",
+    results: {
+      trafficIncrease: "500%",
+      keywordRankings: "50+",
+      organicRevenue: "₹1.8Cr",
+      leadGeneration: "300+"
+    },
+    challenge: "TechFlow Solutions had virtually no organic presence and was heavily dependent on paid advertising. They needed to establish authority and reduce customer acquisition costs.",
+    solution: "We developed a content-driven SEO strategy combined with technical optimization and link building to create sustainable organic growth.",
+    implementation: [
+      "Comprehensive keyword research and content strategy",
+      "Created 100+ high-quality blog posts and resources",
+      "Built authoritative backlink profile",
+      "Optimized technical SEO and site performance",
+      "Developed lead magnets and conversion funnels",
+      "Implemented local SEO for target markets"
+    ],
+    results_detail: "The campaign resulted in 500% organic traffic growth, #1 rankings for 50+ target keywords, and ₹1.8Cr in organic revenue. Customer acquisition costs decreased by 60%.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    testimonial: {
+      quote: "The SEO results were incredible. We went from invisible to industry leaders in organic search.",
+      author: "Rahul Gupta",
+      position: "CEO, TechFlow Solutions"
+    }
+  },
+  "beauty-brand-influencer-strategy": {
+    title: "Beauty Brand Influencer Strategy",
+    subtitle: "50M+ impressions through strategic influencer partnerships",
+    client: "GlowUp Cosmetics",
+    industry: "Beauty & Cosmetics",
+    duration: "4 months",
+    results: {
+      impressions: "50M+",
+      engagementRate: "8.5%",
+      newCustomers: "25,000+",
+      roiIncrease: "400%"
+    },
+    challenge: "GlowUp Cosmetics needed to break into the competitive beauty market and build brand awareness among younger demographics while maintaining profitability.",
+    solution: "We created a multi-tiered influencer marketing strategy targeting micro and macro influencers in the beauty space, with performance-based campaigns and exclusive product launches.",
+    implementation: [
+      "Identified and recruited 200+ beauty influencers",
+      "Created tiered campaign structure based on follower count",
+      "Developed exclusive product launch campaigns",
+      "Implemented influencer-specific tracking and analytics",
+      "Created content guidelines and brand assets",
+      "Established long-term brand ambassador programs"
+    ],
+    results_detail: "The campaign generated 50M+ impressions with an 8.5% engagement rate, acquired 25,000+ new customers, and achieved a 400% ROI increase through strategic influencer partnerships.",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    testimonial: {
+      quote: "The influencer strategy didn't just increase sales, it built our entire brand identity in the market.",
+      author: "Sneha Patel",
+      position: "Marketing Director, GlowUp Cosmetics"
+    }
+  },
+  "home-decor-flipkart-success": {
+    title: "Home Decor Flipkart Success",
+    subtitle: "Became top-selling brand in category with strategic optimization",
+    client: "DecorVilla",
+    industry: "Home & Decor",
+    duration: "5 months",
+    results: {
+      salesGrowth: "450%",
+      categoryRanking: "#1",
+      customerRating: "4.8/5",
+      inventoryTurnover: "12x"
+    },
+    challenge: "DecorVilla was struggling to gain visibility on Flipkart and compete with established home decor brands. Their listings were poorly optimized and sales were stagnant.",
+    solution: "We implemented a comprehensive Flipkart optimization strategy including listing enhancement, promotional campaigns, and inventory management to dominate the home decor category.",
+    implementation: [
+      "Optimized all product listings with high-quality images",
+      "Implemented dynamic pricing strategies",
+      "Launched targeted promotional campaigns",
+      "Improved inventory management and fulfillment",
+      "Enhanced customer service and review management",
+      "Developed category-specific marketing strategies"
+    ],
+    results_detail: "DecorVilla became the #1 selling brand in their category with 450% sales growth, achieved 4.8/5 customer rating, and improved inventory turnover to 12x the previous rate.",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    testimonial: {
+      quote: "We went from struggling sellers to category leaders. The transformation was remarkable.",
+      author: "Amit Jain",
+      position: "Founder, DecorVilla"
+    }
+  },
+  "food-brand-multi-platform-growth": {
+    title: "Food Brand Multi-Platform Growth",
+    subtitle: "Scaled from startup to ₹10Cr revenue across multiple platforms",
+    client: "TasteBuds Foods",
+    industry: "Food & Beverages",
+    duration: "12 months",
+    results: {
+      revenueGrowth: "₹10Cr",
+      platformExpansion: "5 platforms",
+      brandRecognition: "85%",
+      customerBase: "100K+"
+    },
+    challenge: "TasteBuds Foods was a startup with great products but no online presence. They needed to establish themselves across multiple e-commerce platforms and build brand recognition.",
+    solution: "We developed a comprehensive multi-platform strategy covering Amazon, Flipkart, BigBasket, Grofers, and their own D2C website, with integrated marketing campaigns.",
+    implementation: [
+      "Established presence on 5 major e-commerce platforms",
+      "Created platform-specific optimization strategies",
+      "Developed integrated marketing campaigns",
+      "Implemented inventory and supply chain management",
+      "Built brand recognition through content marketing",
+      "Established customer loyalty programs"
+    ],
+    results_detail: "TasteBuds Foods scaled from zero to ₹10Cr revenue in 12 months, established presence on 5 platforms, achieved 85% brand recognition in target markets, and built a customer base of 100K+.",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    testimonial: {
+      quote: "From a small startup to a recognized brand - this journey wouldn't have been possible without their expertise.",
+      author: "Kavya Reddy",
+      position: "Co-founder, TasteBuds Foods"
+    }
+  },
+  "electronics-brand-social-commerce": {
+    title: "Electronics Brand Social Commerce",
+    subtitle: "Integrated influencer marketing with e-commerce for 400% ROI",
+    client: "TechGadgets Pro",
+    industry: "Electronics & Gadgets",
+    duration: "6 months",
+    results: {
+      roiImprovement: "400%",
+      socialSales: "60%",
+      influencerPartners: "500+",
+      contentPieces: "2000+"
+    },
+    challenge: "TechGadgets Pro had good products but struggled to connect with tech enthusiasts and convert social media engagement into sales.",
+    solution: "We created an integrated social commerce strategy combining influencer partnerships, user-generated content, and seamless shopping experiences across social platforms.",
+    implementation: [
+      "Partnered with 500+ tech influencers and reviewers",
+      "Created shoppable content across social platforms",
+      "Developed user-generated content campaigns",
+      "Implemented social commerce tracking and analytics",
+      "Built community-driven product launches",
+      "Integrated social proof and reviews system"
+    ],
+    results_detail: "The social commerce strategy resulted in 400% ROI improvement, with 60% of sales coming from social channels. We created 2000+ content pieces and built a community of 500+ brand advocates.",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    testimonial: {
+      quote: "They transformed how we think about social media - from engagement to actual revenue generation.",
+      author: "Vikram Singh",
+      position: "Marketing Head, TechGadgets Pro"
+    }
+  },
+  "fashion-brand-amazon-growth": {
+    title: "Fashion Brand Amazon Growth",
+    subtitle: "How we achieved 300% sales increase in 6 months",
+    client: "StyleCraft Fashion",
+    industry: "Fashion & Apparel",
+    duration: "6 months",
+    results: {
+      salesIncrease: "300%",
       revenueGrowth: "$2.5M",
       conversionRate: "12.5%",
       affiliatePartners: "150+"

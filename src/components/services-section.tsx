@@ -98,7 +98,9 @@ export default function ServicesSection() {
               
               <div className="pt-4 border-t border-border/50">
                 <button className="inline-flex items-center text-primary hover:text-accent font-semibold text-sm md:text-base transition-colors group/btn">
-                  Learn More
+                  <span onClick={() => window.location.href = `/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}>
+                    Learn More
+                  </span>
                   <span className="ml-2 transition-transform group-hover/btn:translate-x-1">→</span>
                 </button>
               </div>

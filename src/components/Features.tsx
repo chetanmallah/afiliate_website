@@ -22,31 +22,31 @@ export default function Features() {
       icon: TrendingUp,
       title: "Performance Analytics",
       description: "Deep insights into your affiliate program performance. Identify top performers, optimize campaigns, and maximize ROI with data-driven decisions.",
-      gradient: { from: "#10B981", to: "#06B6D4" }
+      gradient: { from: "#8B5CF6", to: "#A855F7" }
     },
     {
       icon: Users,
       title: "Affiliate Management",
       description: "Streamline affiliate recruitment, onboarding, and relationship management. Build a network of high-performing partners with our comprehensive tools.",
-      gradient: { from: "#F59E0B", to: "#EF4444" }
+      gradient: { from: "#A855F7", to: "#C084FC" }
     },
     {
       icon: Shield,
       title: "Fraud Protection",
       description: "Advanced AI-powered fraud detection protects your program from malicious activities. Maintain program integrity with real-time monitoring.",
-      gradient: { from: "#06B6D4", to: "#3B82F6" }
+      gradient: { from: "#C084FC", to: "#DDD6FE" }
     },
     {
       icon: Zap,
       title: "Automated Payouts",
       description: "Eliminate manual payment processing with automated commission calculations and payouts. Support multiple payment methods and currencies.",
-      gradient: { from: "#8B5CF6", to: "#EC4899" }
+      gradient: { from: "#8B5CF6", to: "#A855F7" }
     },
     {
       icon: Globe,
       title: "Global Reach",
       description: "Scale your affiliate program worldwide with multi-currency support, localized tracking, and compliance tools for international markets.",
-      gradient: { from: "#6366F1", to: "#8B5CF6" }
+      gradient: { from: "#7C3AED", to: "#8B5CF6" }
     }
   ];
 
@@ -93,7 +93,7 @@ export default function Features() {
               
               <div className="pt-6 border-t border-border/30">
                 <button 
-                  onClick={() => window.location.href = `/services/${feature.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  onClick={() => window.location.href = `/services/${feature.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                   className="inline-flex items-center text-primary hover:text-accent font-semibold transition-all duration-300 group/btn hover:gap-3"
                 >
                   Learn More

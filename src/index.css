@@ -13,15 +13,15 @@
   --card-foreground: hsl(0, 0%, 12%);
   --border: hsl(0, 0%, 90%);
   --input: hsl(0, 0%, 95%);
-  --primary: hsl(18, 89%, 60%);
+  --primary: hsl(270, 95%, 60%);
   --primary-foreground: hsl(0, 0%, 98%);
   --secondary: hsl(0, 0%, 95%);
   --secondary-foreground: hsl(0, 0%, 12%);
-  --accent: hsl(174, 100%, 42%);
+  --accent: hsl(280, 100%, 70%);
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(18, 89%, 60%);
+  --ring: hsl(270, 95%, 60%);
   --radius: 0.5rem;
 }
 
@@ -65,7 +65,7 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(45deg, hsl(18, 89%, 60%), hsl(174, 100%, 42%));
+    background: linear-gradient(45deg, hsl(270, 95%, 60%), hsl(280, 100%, 70%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -73,9 +73,9 @@
   
   .hero-bg {
     background: 
-      radial-gradient(circle at 30% 20%, hsla(18, 89%, 60%, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, hsla(174, 100%, 42%, 0.15) 0%, transparent 50%),
-      linear-gradient(135deg, hsla(18, 89%, 60%, 0.05) 0%, hsla(174, 100%, 42%, 0.05) 100%);
+      radial-gradient(circle at 30% 20%, hsla(270, 95%, 60%, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, hsla(280, 100%, 70%, 0.15) 0%, transparent 50%),
+      linear-gradient(135deg, hsla(270, 95%, 60%, 0.05) 0%, hsla(280, 100%, 70%, 0.05) 100%);
   }
   
   .animate-gradient-x {
@@ -114,21 +114,21 @@
   
   .card-hover:hover {
     transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 50px hsla(18, 89%, 60%, 0.25);
+    box-shadow: 0 25px 50px hsla(270, 95%, 60%, 0.25);
   }
   
   .service-card {
-    background: linear-gradient(135deg, hsla(18, 89%, 60%, 0.08) 0%, hsla(174, 100%, 42%, 0.08) 100%);
-    border: 1px solid hsla(18, 89%, 60%, 0.2);
+    background: linear-gradient(135deg, hsla(270, 95%, 60%, 0.08) 0%, hsla(280, 100%, 70%, 0.08) 100%);
+    border: 1px solid hsla(270, 95%, 60%, 0.2);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
   }
   
   .service-card:hover {
-    border-color: hsl(18, 89%, 60%);
-    background: linear-gradient(135deg, hsla(18, 89%, 60%, 0.15) 0%, hsla(174, 100%, 42%, 0.15) 100%);
+    border-color: hsl(270, 95%, 60%);
+    background: linear-gradient(135deg, hsla(270, 95%, 60%, 0.15) 0%, hsla(280, 100%, 70%, 0.15) 100%);
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px hsla(18, 89%, 60%, 0.2);
+    box-shadow: 0 20px 40px hsla(270, 95%, 60%, 0.2);
   }
   
   .portfolio-item {
@@ -152,7 +152,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, hsl(18, 89%, 60%), hsl(174, 100%, 42%));
+    background: linear-gradient(90deg, hsl(270, 95%, 60%), hsl(280, 100%, 70%));
     transition: width 0.3s ease;
   }
   
