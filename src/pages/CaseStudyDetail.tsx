@@ -318,7 +318,7 @@ export default function CaseStudyDetail() {
               <Button 
                 variant="ghost" 
                 onClick={() => window.location.href = "/"}
-                className="mb-6 hover:bg-primary/10"
+                className="mb-6 hover:bg-primary/20 text-primary border-primary/20"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Case Studies
