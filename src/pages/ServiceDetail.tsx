@@ -321,7 +321,7 @@ export default function ServiceDetail() {
           <div className="container mx-auto px-4">
             <Button 
               variant="ghost" 
-              onClick={() => window.location.href = "/"}
+              onClick={() => window.location.href = "/#services"}
               className="mb-6 hover:bg-primary/20 text-primary border-primary/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
