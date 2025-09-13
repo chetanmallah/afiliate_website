@@ -140,7 +140,7 @@ export default function Navigation() {
     if (path.startsWith('#')) {
       // If we're not on home page, go to home first
       if (window.location.pathname !== '/') {
-        setLocation('/');
+        window.location.href = '/';
         setTimeout(() => {
           const element = document.getElementById(path.substring(1));
           if (element) {
@@ -154,7 +154,7 @@ export default function Navigation() {
         }
       }
     } else {
-      setLocation(path);
+      window.location.href = path;
     }
     setIsMenuOpen(false);
   };
