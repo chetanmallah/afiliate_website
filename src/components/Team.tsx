@@ -1,4 +1,6 @@
+import { Linkedin, Twitter, Mail, Award, TrendingUp, Users, Target, Star, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { Link } from "wouter";
 
 export default function Team() {
   const { ref, isIntersecting } = useIntersectionObserver();
@@ -10,7 +12,13 @@ export default function Team() {
       description: "Visionary leader with 10+ years in affiliate marketing, driving innovation and strategic growth across global markets.",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
       expertise: ["Strategy", "Leadership", "Growth"],
-      experience: "10+ years"
+      experience: "10+ years",
+      icon: Award,
+      social: {
+        linkedin: "https://linkedin.com/in/chandankumarmallah",
+        twitter: "https://twitter.com/chandanmallah",
+        email: "chandan@growthhexa.com"
+      }
     },
     {
       name: "Priya Patel",
@@ -18,7 +26,13 @@ export default function Team() {
       description: "Performance marketing expert specializing in conversion optimization and data-driven affiliate strategies.",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
       expertise: ["Analytics", "Optimization", "ROI"],
-      experience: "8+ years"
+      experience: "8+ years",
+      icon: TrendingUp,
+      social: {
+        linkedin: "https://linkedin.com/in/priyapatel",
+        twitter: "https://twitter.com/priyapatel",
+        email: "priya@growthhexa.com"
+      }
     },
     {
       name: "Arjun Gupta",
@@ -26,7 +40,13 @@ export default function Team() {
       description: "Technology leader building scalable affiliate platforms and innovative tracking solutions for enterprise clients.",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
       expertise: ["Platform", "API", "Scale"],
-      experience: "12+ years"
+      experience: "12+ years",
+      icon: Zap,
+      social: {
+        linkedin: "https://linkedin.com/in/arjungupta",
+        twitter: "https://twitter.com/arjungupta",
+        email: "arjun@growthhexa.com"
+      }
     },
   ];
 
@@ -46,39 +66,83 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              onClick={() => window.location.href = `/experts/${member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-              className={`group cursor-pointer text-center p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:shadow-2xl transition-all duration-700 ${
+              className={`group text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200/50 hover:shadow-2xl hover:border-purple-400 transition-all duration-700 ${
                 isIntersecting ? 'animate-slide-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="relative mb-6">
+              <Link to={`/experts/${member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}>
+              {/* Role Icon */}
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center shadow-lg">
+                  <member.icon className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              
+              <div className="relative mb-6 group-hover:scale-105 transition-transform duration-300">
                 <img 
                   src={member.image} 
                   alt={`${member.name} - ${member.role}`}
-                  className="w-24 h-24 rounded-full mx-auto object-cover group-hover:scale-110 transition-transform duration-500 shadow-lg"
+                  className="w-32 h-32 rounded-full mx-auto object-cover shadow-xl border-4 border-white"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent rounded-full"></div>
+                
+                {/* Experience Badge */}
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                    {member.experience}
+                  </span>
+                </div>
               </div>
               
-              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-purple-600 transition-colors">
                 {member.name}
               </h3>
-              <p className="text-primary font-semibold mb-2">{member.role}</p>
-              <p className="text-sm text-muted-foreground mb-4">{member.experience}</p>
+              <p className="text-purple-600 font-semibold mb-3">{member.role}</p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 {member.description}
               </p>
               
-              <div className="flex flex-wrap justify-center gap-2">
+              {/* Expertise Tags */}
+              <div className="flex flex-wrap justify-center gap-2 mb-6">
                 {member.expertise.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium border border-purple-200"
                   >
                     {skill}
                   </span>
                 ))}
+              </div>
+              </Link>
+              
+              {/* Social Links */}
+              <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a
+                  href={member.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href={member.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Twitter className="w-4 h-4" />
+                </a>
+                <a
+                  href={`mailto:${member.social.email}`}
+                  className="w-8 h-8 bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
               </div>
             </div>
           ))}

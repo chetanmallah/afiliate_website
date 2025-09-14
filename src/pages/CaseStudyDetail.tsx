@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "wouter";
 
 const caseStudyData = {
   "fashion-brand-amazon-growth": {
@@ -290,10 +291,12 @@ export default function CaseStudyDetail() {
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
           <p className="text-muted-foreground mb-8">The case study you're looking for doesn't exist.</p>
-          <Button onClick={() => window.location.href = "/"}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
+          <Link to="/">
+            <Button>
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
         </div>
         <Footer />
       </div>
@@ -315,14 +318,15 @@ export default function CaseStudyDetail() {
         <article className="pt-24">
           <header className="py-12 bg-gradient-to-br from-primary/5 via-background to-accent/5">
             <div className="container mx-auto px-4">
-              <Button 
-                variant="ghost" 
-                onClick={() => window.location.href = "/"}
-                className="mb-6 hover:bg-primary/10"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Case Studies
-              </Button>
+              <Link to="/#work">
+                <Button 
+                  variant="ghost" 
+                  className="mb-6 hover:bg-primary/20 text-primary border-primary/20"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Case Studies
+                </Button>
+              </Link>
               
               <div className="max-w-4xl">
                 <div className="flex items-center gap-4 mb-6">

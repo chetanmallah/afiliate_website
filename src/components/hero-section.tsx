@@ -39,7 +39,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 leading-tight">
-            <span className="block text-foreground">Your E-commerce &</span>
+            <span className="block text-foreground">Your E-commerce &amp;</span>
             <span className="block text-gradient animate-gradient-x">Digital Marketing</span>
             <span className="block text-foreground">Growth Partner</span>
           </h1>
