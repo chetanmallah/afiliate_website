@@ -1,13 +1,13 @@
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 
 export default function Footer() {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
 
   const handleNavigation = (path: string) => {
     if (path.startsWith('#')) {
       // If we're not on home page, go to home first
-      if (window.location.pathname !== '/') {
-        window.location.href = '/';
+      if (location !== '/') {
+        setLocation('/');
         setTimeout(() => {
           const element = document.getElementById(path.substring(1));
           if (element) {
@@ -21,8 +21,7 @@ export default function Footer() {
         }
       }
     } else {
-      window.location.href = path;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setLocation(path);
     }
   };
 

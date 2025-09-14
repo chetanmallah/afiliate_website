@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { ExternalLink, TrendingUp } from "lucide-react";
+import { Link } from "wouter";
 
 export default function PortfolioSection() {
   const { ref, isIntersecting } = useIntersectionObserver();
@@ -115,24 +116,27 @@ export default function PortfolioSection() {
                   {item.description}
                 </p>
                 
-                <button className="inline-flex items-center text-primary hover:text-accent font-semibold text-sm transition-colors group/btn">
-                  <span onClick={() => window.location.href = `/case-studies/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                <Link 
+                  to={`/case-studies/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center text-primary hover:text-accent font-semibold text-sm transition-colors group/btn"
+                >
                     View Case Study
-                  </span>
                   <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            View All Success Stories
-          </Button>
+          <Link to="/blog">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              View All Success Stories
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

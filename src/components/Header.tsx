@@ -119,13 +119,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import logo from "../../assets/logo.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,8 +139,8 @@ export default function Navigation() {
   const handleNavigation = (path: string) => {
     if (path.startsWith('#')) {
       // If we're not on home page, go to home first
-      if (window.location.pathname !== '/') {
-        window.location.href = '/';
+      if (location !== '/') {
+        setLocation('/');
         setTimeout(() => {
           const element = document.getElementById(path.substring(1));
           if (element) {
@@ -154,7 +154,7 @@ export default function Navigation() {
         }
       }
     } else {
-      window.location.href = path;
+      setLocation(path);
     }
     setIsMenuOpen(false);
   };

@@ -1,5 +1,6 @@
 import { Linkedin, Twitter, Mail, Award, TrendingUp, Users, Target, Star, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { Link } from "wouter";
 
 export default function Team() {
   const { ref, isIntersecting } = useIntersectionObserver();
@@ -65,12 +66,12 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              onClick={() => window.location.href = `/experts/${member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-              className={`group cursor-pointer text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200/50 hover:shadow-2xl hover:border-purple-400 transition-all duration-700 ${
+              className={`group text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200/50 hover:shadow-2xl hover:border-purple-400 transition-all duration-700 ${
                 isIntersecting ? 'animate-slide-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
+              <Link to={`/experts/${member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}>
               {/* Role Icon */}
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center shadow-lg">
@@ -113,6 +114,7 @@ export default function Team() {
                   </span>
                 ))}
               </div>
+              </Link>
               
               {/* Social Links */}
               <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
