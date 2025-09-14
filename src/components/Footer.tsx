@@ -1,12 +1,12 @@
-import { useLocation, Link } from "wouter";
+import { useLocation } from "wouter";
 
 export default function Footer() {
-  const [location, setLocation] = useLocation();
+  const [, setLocation] = useLocation();
 
   const handleNavigation = (path: string) => {
     if (path.startsWith('#')) {
       // If we're not on home page, go to home first
-      if (location !== '/') {
+      if (window.location.pathname !== '/') {
         setLocation('/');
         setTimeout(() => {
           const element = document.getElementById(path.substring(1));
@@ -22,6 +22,7 @@ export default function Footer() {
       }
     } else {
       setLocation(path);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -42,19 +43,17 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               {[
-                { name: 'LinkedIn', icon: 'in', color: 'hover:bg-blue-600', url: 'https://linkedin.com/company/growthhexa' },
-                { name: 'Twitter', icon: '𝕏', color: 'hover:bg-gray-800', url: 'https://twitter.com/growthhexa' },
-                { name: 'Instagram', icon: '📷', color: 'hover:bg-pink-600', url: 'https://instagram.com/growthhexa' },
-                { name: 'Facebook', icon: 'f', color: 'hover:bg-blue-700', url: 'https://facebook.com/growthhexa' }
+                { name: 'LinkedIn', icon: 'Li', color: 'hover:bg-blue-600' },
+                { name: 'Twitter', icon: 'Tw', color: 'hover:bg-blue-400' },
+                { name: 'Instagram', icon: 'Ig', color: 'hover:bg-pink-600' },
+                { name: 'Facebook', icon: 'Fb', color: 'hover:bg-blue-700' }
               ].map((social) => (
                 <a
                   key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className={`w-10 h-10 bg-secondary/50 ${social.color} text-muted-foreground hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110`}
                 >
-                  <span className="text-sm font-bold">{social.icon}</span>
+                  <span className="text-xs font-bold">{social.icon}</span>
                 </a>
               ))}
             </div>
