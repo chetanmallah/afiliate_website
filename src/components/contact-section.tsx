@@ -488,7 +488,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1 text-foreground">Email</h4>
-                    <p className="text-muted-foreground">info@growthhexa.com</p>
+                    <p className="text-muted-foreground">info@growthexa.com</p>
                   </div>
                 </div>
               </div>

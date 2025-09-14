@@ -317,12 +317,12 @@ export default function ServiceDetail() {
         <Header />
         
         {/* Hero Section */}
-        <section className="pt-24 pb-12 bg-gradient-to-br from-primary/10 via-background to-accent/10">
+        <section className="pt-24 pb-12 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4">
             <Button 
               variant="ghost" 
               onClick={() => window.location.href = "/"}
-              className="mb-6 hover:bg-primary/20 text-primary border-primary/20"
+              className="mb-6 hover:bg-primary/10"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Services
@@ -340,7 +340,7 @@ export default function ServiceDetail() {
                   <Button size="lg" className="bg-primary hover:bg-primary/90">
                     Get Started - {service.pricing}
                   </Button>
-                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
+                  <Button variant="outline" size="lg">
                     Schedule Demo
                   </Button>
                 </div>

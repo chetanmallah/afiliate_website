@@ -119,13 +119,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
 import logo from "../../assets/logo.png";
+// ✅ adjust the path if your file is elsewhere
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -136,25 +135,10 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavigation = (path: string) => {
-    if (path.startsWith('#')) {
-      // If we're not on home page, go to home first
-      if (window.location.pathname !== '/') {
-        setLocation('/');
-        setTimeout(() => {
-          const element = document.getElementById(path.substring(1));
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      } else {
-        const element = document.getElementById(path.substring(1));
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    } else {
-      setLocation(path);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
@@ -171,9 +155,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <div className="flex items-center gap-2">
+              {/* ✅ Replace Sparkles with your logo */}
               <img
                 src={logo}
-                alt="GrowthHexa Logo"
+                alt="EcommerceExpers Logo"
                 className="h-14 md:h-14 w-auto object-contain"
               />
             </div>
@@ -182,19 +167,13 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {[
-                { name: "home", path: "#home" },
-                { name: "about", path: "#about" },
-                { name: "services", path: "#services" },
-                { name: "work", path: "#work" },
-                { name: "contact", path: "#contact" }
-              ].map((item) => (
+              {["home", "about", "services", "work", "contact"].map((item) => (
                 <button
-                  key={item.name}
-                  onClick={() => handleNavigation(item.path)}
+                  key={item}
+                  onClick={() => scrollToSection(item)}
                   className="nav-link text-foreground hover:text-primary px-3 py-2 text-sm font-medium capitalize transition-all duration-300 relative group"
                 >
-                  {item.name}
+                  {item}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
@@ -204,7 +183,7 @@ export default function Navigation() {
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
             <Button
-              onClick={() => handleNavigation("#contact")}
+              onClick={() => scrollToSection("contact")}
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 font-semibold transition-all duration-300 transform hover:scale-105"
             >
               Get Started
@@ -232,26 +211,20 @@ export default function Navigation() {
         }`}
       >
         <div className="px-4 pt-2 pb-6 space-y-1 bg-background/95 backdrop-blur-lg border-t border-border/50">
-          {[
-            { name: "home", path: "#home" },
-            { name: "about", path: "#about" },
-            { name: "services", path: "#services" },
-            { name: "work", path: "#work" },
-            { name: "contact", path: "#contact" }
-          ].map((item, index) => (
+          {["home", "about", "services", "work", "contact"].map((item, index) => (
             <button
-              key={item.name}
-              onClick={() => handleNavigation(item.path)}
+              key={item}
+              onClick={() => scrollToSection(item)}
               className="block w-full text-left px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 capitalize"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              {item.name}
+              {item}
             </button>
           ))}
 
           <div className="pt-4">
             <Button
-              onClick={() => handleNavigation("#contact")}
+              onClick={() => scrollToSection("contact")}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 font-semibold transition-all duration-300"
             >
               Get Started
