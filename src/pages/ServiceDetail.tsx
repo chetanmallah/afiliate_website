@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "wouter";
 
 const serviceData = {
   "influencer-marketing": {
@@ -296,10 +297,12 @@ export default function ServiceDetail() {
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
           <p className="text-muted-foreground mb-8">The service you're looking for doesn't exist.</p>
-          <Button onClick={() => window.location.href = "/"}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
+          <Link to="/">
+            <Button>
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
         </div>
         <Footer />
       </div>
@@ -319,14 +322,15 @@ export default function ServiceDetail() {
         {/* Hero Section */}
         <section className="pt-24 pb-12 bg-gradient-to-br from-primary/10 via-background to-accent/10">
           <div className="container mx-auto px-4">
-            <Button 
-              variant="ghost" 
-              onClick={() => window.location.href = "/#services"}
-              className="mb-6 hover:bg-primary/20 text-primary border-primary/20"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Services
-            </Button>
+            <Link to="/#services">
+              <Button 
+                variant="ghost" 
+                className="mb-6 hover:bg-primary/20 text-primary border-primary/20"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Services
+              </Button>
+            </Link>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
