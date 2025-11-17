@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="AffiliatePro Solutions - Advanced Affiliate Marketing Platform"
+        title="gggg AffiliatePro Solutions - Advanced Affiliate Marketing Platform"
         description="Transform your affiliate marketing with our comprehensive platform. Track performance, manage partnerships, and scale your affiliate business with enterprise-grade tools."
         keywords="affiliate marketing platform, affiliate tracking, performance marketing, affiliate management, digital marketing tools"
       />
