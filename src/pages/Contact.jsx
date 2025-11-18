@@ -12,7 +12,7 @@ export default function Contact() {
       icon: Phone,
       title: 'Call Us',
       content: '+91 9892590355',
-      link: 'tel:+919876543210',
+      link: 'tel:+919892590355',
     },
     {
       icon: MapPin,
