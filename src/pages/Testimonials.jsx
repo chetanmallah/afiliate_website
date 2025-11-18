@@ -5,7 +5,7 @@ export default function Testimonials() {
     {
       id: 1,
       name: 'Rajesh Kumar',
-      role: 'Founder & CEO',
+      // role: 'Founder & CEO',
       company: 'TechGear India',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -14,7 +14,7 @@ export default function Testimonials() {
     {
       id: 2,
       name: 'Priya Sharma',
-      role: 'CEO',
+      // role: 'CEO',
       company: 'Fashion Hub',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -23,7 +23,7 @@ export default function Testimonials() {
     {
       id: 3,
       name: 'Amit Patel',
-      role: 'Director',
+      // role: 'Director',
       company: 'HomeEssentials',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -32,7 +32,7 @@ export default function Testimonials() {
     {
       id: 4,
       name: 'Sneha Desai',
-      role: 'Founder',
+      // role: 'Founder',
       company: 'BeautyBliss',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -41,7 +41,7 @@ export default function Testimonials() {
     {
       id: 5,
       name: 'Karthik Reddy',
-      role: 'Co-Founder',
+      // role: 'Co-Founder',
       company: 'SportsFit Pro',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -50,7 +50,7 @@ export default function Testimonials() {
     {
       id: 6,
       name: 'Ananya Singh',
-      role: 'Marketing Head',
+      // role: 'Marketing Head',
       company: 'GreenLife Organics',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -59,7 +59,7 @@ export default function Testimonials() {
     {
       id: 7,
       name: 'Rohan Malhotra',
-      role: 'CEO',
+      // role: 'CEO',
       company: 'ElectroMart',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -68,7 +68,7 @@ export default function Testimonials() {
     {
       id: 8,
       name: 'Meera Kapoor',
-      role: 'Owner',
+      // role: 'Owner',
       company: 'KidsKorner',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
@@ -77,7 +77,7 @@ export default function Testimonials() {
     {
       id: 9,
       name: 'Vikram Joshi',
-      role: 'Managing Director',
+      // role: 'Managing Director',
       company: 'FurnitureHub',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
       rating: 5,
