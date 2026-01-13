@@ -26,19 +26,17 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-400 border-t border-gray-800">
       <div className="w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
-                Growthexa
-              </h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6">
+        <div className="section-container py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-white">Growthexa</h3>
+              <p className="text-sm leading-relaxed text-gray-400">
                 Helping businesses grow on Amazon, Flipkart, Myntra, Meesho, and other
                 e-commerce platforms through smart affiliate marketing and SEO optimization.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex gap-2 pt-2">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (
@@ -46,25 +44,24 @@ export default function Footer() {
                       key={index}
                       href={social.href}
                       aria-label={social.label}
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-600 hover:scale-110 transition-all duration-300 group"
+                      className="w-10 h-10 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center hover:bg-teal-600 hover:border-teal-600 transition-all duration-300 group"
                     >
-                      <Icon size={18} className="group-hover:scale-110 transition-transform" />
+                      <Icon size={16} className="text-gray-400 group-hover:text-white" />
                     </a>
                   );
                 })}
               </div>
             </div>
 
-            <div>
-              <h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
+            <div className="space-y-6">
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-sm text-gray-400 hover:text-teal-400 transition-colors duration-200 inline-flex items-center group"
+                      className="text-sm text-gray-400 hover:text-teal-400 transition-colors duration-200"
                     >
-                      <span className="w-0 h-0.5 bg-teal-400 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                       {link.name}
                     </Link>
                   </li>
@@ -72,16 +69,15 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-lg font-bold text-white mb-4">Our Services</h4>
+            <div className="space-y-6">
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Our Services</h4>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
                     <Link
                       to={service.path}
-                      className="text-sm text-gray-400 hover:text-teal-400 transition-colors duration-200 inline-flex items-center group"
+                      className="text-sm text-gray-400 hover:text-teal-400 transition-colors duration-200"
                     >
-                      <span className="w-0 h-0.5 bg-teal-400 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                       {service.name}
                     </Link>
                   </li>
@@ -89,11 +85,11 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-lg font-bold text-white mb-4">Contact Info</h4>
-              <div className="space-y-4">
-                <div className="flex items-start group">
-                  <Mail size={18} className="mr-3 mt-1 flex-shrink-0 text-teal-500 group-hover:scale-110 transition-transform" />
+            <div className="space-y-6">
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Mail size={16} className="mt-0.5 flex-shrink-0 text-teal-500" />
                   <a
                     href="mailto:support@growthexa.com"
                     className="text-sm text-gray-400 hover:text-teal-400 transition-colors"
@@ -101,19 +97,19 @@ export default function Footer() {
                     support@growthexa.com
                   </a>
                 </div>
-                <div className="flex items-start group">
-                  <Phone size={18} className="mr-3 mt-1 flex-shrink-0 text-teal-500 group-hover:scale-110 transition-transform" />
+                <div className="flex items-start gap-3">
+                  <Phone size={16} className="mt-0.5 flex-shrink-0 text-teal-500" />
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919892590355"
                     className="text-sm text-gray-400 hover:text-teal-400 transition-colors"
                   >
                     +91 9892590355
                   </a>
                 </div>
-                <div className="flex items-start group">
-                  <MapPin size={18} className="mr-3 mt-1 flex-shrink-0 text-teal-500 group-hover:scale-110 transition-transform" />
+                <div className="flex items-start gap-3">
+                  <MapPin size={16} className="mt-0.5 flex-shrink-0 text-teal-500" />
                   <span className="text-sm text-gray-400">
-                    Mulund West, Mumbai, India
+                    Mulund West, Mumbai
                   </span>
                 </div>
               </div>
@@ -121,11 +117,11 @@ export default function Footer() {
           </div>
 
           <div className="border-t border-gray-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-sm text-gray-400 mb-4 md:mb-0">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-gray-500">
                 &copy; {new Date().getFullYear()} Growthexa. All rights reserved.
               </p>
-              <div className="flex space-x-6">
+              <div className="flex gap-6">
                 <a href="#" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
                   Privacy Policy
                 </a>
